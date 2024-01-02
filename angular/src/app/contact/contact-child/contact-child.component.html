@@ -1,0 +1,12 @@
+<!-- contact-child.component.html -->
+<div class="contact-card card">
+    <img [src]="contact?.image" alt="{{ contact?.name }}" class="card-img-top" (click)="showDetails()">
+    <div class="card-body">
+      <h2 class="card-title">{{ contact?.name }}</h2>
+      <div class="contact-details hidden" [@expandCollapse]="state">
+        <p class="card-text">{{ contact?.email }}</p>
+        <p class="card-text">{{ contact?.phone }}</p>
+      </div>
+    </div>
+</div>
+  
