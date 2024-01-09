@@ -62,4 +62,18 @@ export class FormulaireComponent implements OnInit {
     this.recipeService.addRecipe(newRecipe);
     this.recipeForm.reset();
   }
+  handleFileChange(event: Event) {
+    const target = event.target as HTMLInputElement;
+    if (target && target.files && target.files.length > 0) {
+      const file = target.files[0];
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        if (e.target) {
+          this.previewImage = e.target.result as string;
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
 }
