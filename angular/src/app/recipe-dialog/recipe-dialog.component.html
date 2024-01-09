@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>{{ recipe.title }}</h2>
+<mat-dialog-content>
+  <img [src]="recipe.image" alt="Image de la recette" class="img-fluid">
+  <p>Ingrédients : {{ recipe.ingredients }}</p>
+  <p>Instructions : {{ recipe.instructions }}</p>
+  <p class="card-text">Note :
+    <span class="star">
+        {{ recipe.rating | starRating }}
+    </span> 
+</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Fermer</button>
+</mat-dialog-actions>

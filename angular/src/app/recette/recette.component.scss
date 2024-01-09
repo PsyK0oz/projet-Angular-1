@@ -10,16 +10,15 @@
   }
 
 .recipe-card {
-    height: 400px; /* Ajustez cette valeur en fonction de vos besoins */
+    height: 400px; 
   }
   
   .recipe-card-body {
-    max-height: calc(100% - 50px); /* 50px est la hauteur approximative de l'image de la recette */
+    max-height: calc(100% - 50px); 
     overflow-y: auto;
   }
-/* styles.css */
+
 .card-img-top {
-    height: 200px; /* Ajustez cette valeur en fonction de vos besoins */
+    height: 200px; 
     object-fit: cover;
   }
-  

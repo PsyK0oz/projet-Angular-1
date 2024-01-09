@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule,HAMMER_GESTURE_CONFIG, HammerModule } from '@angular/platform-browser';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { ContactDetailComponent } from './contact/contact-detail/contact-detail.
 import { RecetteComponent } from './recette/recette.component';
 import { StarRatingPipe } from './shares/star-rating.pipe';
 import { StarImagePipe } from './shares/star-image.pipe';
+import { RecipeDialogComponent } from './recipe-dialog/recipe-dialog.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { StarImagePipe } from './shares/star-image.pipe';
     ContactDetailComponent,
     RecetteComponent,
     StarRatingPipe,
-    StarImagePipe
+    StarImagePipe,
+    RecipeDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { StarImagePipe } from './shares/star-image.pipe';
     ReactiveFormsModule,
     MatSliderModule,
     BrowserAnimationsModule,
-    HammerModule
+    HammerModule,
+    MatDialogModule 
   ],
   providers: [
   ],

@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
       <div *ngFor="let recipe of recipes" class="col-md-3">
-        <div class="card mb-3 recipe-card">
+        <div class="card mb-3 recipe-card" (click)="openRecipe(recipe)">
           <img [src]="recipe.image" alt="Image de la recette" class="card-img-top img-fluid" *ngIf="recipe.image">
           <div class="card-body recipe-card-body">
             <h5 class="card-title">{{ recipe.title | titlecase }}</h5>
