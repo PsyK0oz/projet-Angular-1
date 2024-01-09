@@ -8,7 +8,11 @@
             <h5 class="card-title">{{ recipe.title | titlecase }}</h5>
             <p class="card-text">Ingrédients : {{ recipe.ingredients }}</p>
             <p class="card-text">Instructions : {{ recipe.instructions }}</p>
-            <p class="card-text star">Note : {{ recipe.rating | starRating }}</p>
+            <p class="card-text">Note :
+                <span class="star">
+                    {{ recipe.rating | starRating }}
+                </span> 
+            </p>
           </div>
         </div>
       </div>
