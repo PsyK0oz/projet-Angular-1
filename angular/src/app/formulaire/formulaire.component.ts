@@ -50,18 +50,7 @@ export class FormulaireComponent implements OnInit {
       imageControl.valueChanges.subscribe(image => this.previewImage = image);
     }
   }
-
-  onSubmitForm() {
-    const formValue = this.recipeForm.value;
-    const newRecipe: Recipe = {
-      title: formValue['title'],
-      ingredients: formValue['ingredients'],
-      instructions: formValue['instructions'],
-      image: formValue['image']
-    };
-    this.recipeService.addRecipe(newRecipe);
-    this.recipeForm.reset();
-  }
+  
   handleFileChange(event: Event) {
     const target = event.target as HTMLInputElement;
     if (target && target.files && target.files.length > 0) {
@@ -75,5 +64,18 @@ export class FormulaireComponent implements OnInit {
       reader.readAsDataURL(file);
     }
   }
+
+  onSubmitForm() {
+    const formValue = this.recipeForm.value;
+    const newRecipe: Recipe = {
+      title: formValue['title'],
+      ingredients: formValue['ingredients'],
+      instructions: formValue['instructions'],
+      image: formValue['image']
+    };
+    this.recipeService.addRecipe(newRecipe);
+    this.recipeForm.reset();
+  }
+  
 
 }
