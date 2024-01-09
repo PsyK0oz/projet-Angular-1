@@ -1,9 +1,18 @@
 <!-- formulaire.component.html -->
-<form [formGroup]="recipeForm" (ngSubmit)="onSubmitForm()">
-  <input formControlName="title" placeholder="Titre de la recette">
-  <textarea formControlName="ingredients" placeholder="Ingrédients"></textarea>
-  <textarea formControlName="instructions" placeholder="Instructions"></textarea>
-  <input formControlName="image" placeholder="URL de l'image">
-  <button type="submit">Ajouter la recette</button>
-</form>
-<img [src]="previewImage" alt="Aperçu de l'image">
+<div class="row">
+  <div class="col">
+    <form [formGroup]="recipeForm" (ngSubmit)="onSubmitForm()">
+      <input formControlName="title" placeholder="Titre de la recette">
+      <textarea formControlName="ingredients" placeholder="Ingrédients"></textarea>
+      <textarea formControlName="instructions" placeholder="Instructions"></textarea>
+      <input formControlName="image" placeholder="URL de l'image">
+      <button type="submit">Ajouter la recette</button>
+    </form>
+  </div>
+  <div class="col">
+    <h2>{{ previewTitle }}</h2>
+    <p>{{ previewIngredients }}</p>
+    <p>{{ previewInstructions }}</p>
+    <img [src]="previewImage" alt="Aperçu de l'image">
+  </div>
+</div>

@@ -11,7 +11,10 @@ import { RecipeService } from '../services/recipe.service';
 })
 export class FormulaireComponent implements OnInit {
   recipeForm!: FormGroup;
-  previewImage!: string;
+  previewTitle = '';
+  previewIngredients = '';
+  previewInstructions = '';
+  previewImage = '';
 
   constructor(private formBuilder: FormBuilder, private recipeService: RecipeService) { }
 
@@ -27,9 +30,25 @@ export class FormulaireComponent implements OnInit {
       image: ['', Validators.required]
     });
 
-    this.recipeForm.valueChanges.subscribe((recipe: Recipe) => {
-      this.previewImage = recipe.image;
-    });
+    const titleControl = this.recipeForm.get('title');
+    if (titleControl) {
+      titleControl.valueChanges.subscribe(title => this.previewTitle = title);
+    }
+
+    const ingredientsControl = this.recipeForm.get('ingredients');
+    if (ingredientsControl) {
+      ingredientsControl.valueChanges.subscribe(ingredients => this.previewIngredients = ingredients);
+    }
+
+    const instructionsControl = this.recipeForm.get('instructions');
+    if (instructionsControl) {
+      instructionsControl.valueChanges.subscribe(instructions => this.previewInstructions = instructions);
+    }
+
+    const imageControl = this.recipeForm.get('image');
+    if (imageControl) {
+      imageControl.valueChanges.subscribe(image => this.previewImage = image);
+    }
   }
 
   onSubmitForm() {
