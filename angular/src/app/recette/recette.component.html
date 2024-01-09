@@ -1,9 +1,9 @@
 <div class="container">
     <div class="row">
       <div *ngFor="let recipe of recipes" class="col-md-3">
-        <div class="card mb-3">
-          <img [src]="recipe.image" alt="Image de la recette" class="card-img-top img-fluid img-thumbnail" *ngIf="recipe.image">
-          <div class="card-body">
+        <div class="card mb-3 recipe-card">
+          <img [src]="recipe.image" alt="Image de la recette" class="card-img-top img-fluid" *ngIf="recipe.image">
+          <div class="card-body recipe-card-body">
             <h5 class="card-title">{{ recipe.title | titlecase }}</h5>
             <p class="card-text">Ingrédients : {{ recipe.ingredients }}</p>
             <p class="card-text">Instructions : {{ recipe.instructions }}</p>
