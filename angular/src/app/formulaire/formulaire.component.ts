@@ -36,7 +36,7 @@ export class FormulaireComponent implements OnInit {
     if (ratingControl) {
       ratingControl.valueChanges.subscribe(rating => this.previewRating = rating);
     }
-    
+
     const titleControl = this.recipeForm.get('title');
     if (titleControl) {
       titleControl.valueChanges.subscribe(title => this.previewTitle = title);
@@ -78,7 +78,7 @@ export class FormulaireComponent implements OnInit {
       title: formValue['title'],
       ingredients: formValue['ingredients'],
       instructions: formValue['instructions'],
-      image: formValue['image'],
+      image: this.previewImage,
       rating: formValue['rating'],
     };
     this.recipeService.addRecipe(newRecipe);

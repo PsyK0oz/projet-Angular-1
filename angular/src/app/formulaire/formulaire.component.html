@@ -38,7 +38,6 @@
       <p *ngIf="previewInstructions">Instructions : {{ previewInstructions }}</p>
       <img [src]="previewImage" alt="Aperçu de l'image" class="img-fluid img-thumbnail" *ngIf="previewImage"><br>
       <img [src]="previewRating | starImage" alt="Aperçu de la note" class="img-fluid" *ngIf="previewRating">
-      <p *ngIf="previewRating" class="star">Note : {{ previewRating | starRating }}</p>
     </div>
   </div>
 </div>
