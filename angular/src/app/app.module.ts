@@ -18,6 +18,7 @@ import { StarRatingPipe } from './shares/star-rating.pipe';
 import { StarImagePipe } from './shares/star-image.pipe';
 import { RecipeDialogComponent } from './recipe-dialog/recipe-dialog.component';
 import { InformationComponent } from './information/information.component';
+import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { InformationComponent } from './information/information.component';
     StarImagePipe,
     RecipeDialogComponent,
     InformationComponent,
+    ImageDialogComponent,
     
   ],
   imports: [

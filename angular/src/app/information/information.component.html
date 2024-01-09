@@ -17,7 +17,7 @@
             <td>{{robot.name}}</td>
             <td>{{robot.rating}}</td>
             <td>
-              <img [src]="robot.imageUrl" alt="{{robot.name}}" class="img-fluid">
+              <img [src]="robot.imageUrl" alt="{{robot.name}}" class="img-fluid" (click)="openImageDialog(robot.imageUrl)">
             </td>
           </tr>
         </tbody>
