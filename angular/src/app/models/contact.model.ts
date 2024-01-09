@@ -5,5 +5,6 @@ export interface Contact {
     phone: string;
     image: string;
     details: string;
+    
   }
   

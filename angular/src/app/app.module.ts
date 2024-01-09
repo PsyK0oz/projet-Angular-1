@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactComponent } from './contact/contact.component';
 import { ContactChildComponent } from './contact/contact-child/contact-child.component';
 import { ContactDetailComponent } from './contact/contact-detail/contact-detail.component';
+import { RecetteComponent } from './recette/recette.component';
+import { StarRatingPipe } from './shares/star-rating.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ContactDetailComponent } from './contact/contact-detail/contact-detail.
     FormulaireComponent,
     ContactComponent,
     ContactChildComponent,
-    ContactDetailComponent
+    ContactDetailComponent,
+    RecetteComponent,
+    StarRatingPipe
   ],
   imports: [
     BrowserModule,

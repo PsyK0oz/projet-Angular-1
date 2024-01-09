@@ -15,6 +15,7 @@ export class FormulaireComponent implements OnInit {
   previewIngredients = '';
   previewInstructions = '';
   previewImage = '';
+  previewRating = 0;
 
   constructor(private formBuilder: FormBuilder, private recipeService: RecipeService) { }
 
@@ -27,9 +28,15 @@ export class FormulaireComponent implements OnInit {
       title: ['', Validators.required],
       ingredients: ['', Validators.required],
       instructions: ['', Validators.required],
-      image: ['', Validators.required]
+      image: ['', Validators.required],
+      rating: [0, Validators.required]
     });
 
+    const ratingControl = this.recipeForm.get('rating');
+    if (ratingControl) {
+      ratingControl.valueChanges.subscribe(rating => this.previewRating = rating);
+    }
+    
     const titleControl = this.recipeForm.get('title');
     if (titleControl) {
       titleControl.valueChanges.subscribe(title => this.previewTitle = title);
@@ -50,7 +57,7 @@ export class FormulaireComponent implements OnInit {
       imageControl.valueChanges.subscribe(image => this.previewImage = image);
     }
   }
-  
+
   handleFileChange(event: Event) {
     const target = event.target as HTMLInputElement;
     if (target && target.files && target.files.length > 0) {
@@ -71,10 +78,12 @@ export class FormulaireComponent implements OnInit {
       title: formValue['title'],
       ingredients: formValue['ingredients'],
       instructions: formValue['instructions'],
-      image: formValue['image']
+      image: formValue['image'],
+      rating: formValue['rating'],
     };
     this.recipeService.addRecipe(newRecipe);
     this.recipeForm.reset();
+    
   }
   
 

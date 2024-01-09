@@ -23,6 +23,12 @@
           <label for="imageFile" class="form-label">Télécharger une image</label>
           <input type="file" id="imageFile" (change)="handleFileChange($event)">
         </div>
+        <div class="mb-3">
+          <label for="rating" class="form-label">Note</label>
+          <select formControlName="rating" id="rating" class="form-control">
+            <option *ngFor="let i of [1, 2, 3, 4, 5]" [value]="i">{{ i }}</option>
+          </select>
+        </div>
         <button type="submit" class="btn btn-primary">Ajouter la recette</button>
       </form>
     </div>
@@ -31,6 +37,7 @@
       <p *ngIf="previewIngredients">Ingrédients : {{ previewIngredients }}</p>
       <p *ngIf="previewInstructions">Instructions : {{ previewInstructions }}</p>
       <img [src]="previewImage" alt="Aperçu de l'image" class="img-fluid img-thumbnail" *ngIf="previewImage">
+      <p *ngIf="previewRating" class="star">Note : {{ previewRating | starRating }}</p>
     </div>
   </div>
 </div>
