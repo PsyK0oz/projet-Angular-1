@@ -14,6 +14,7 @@ import { ContactChildComponent } from './contact/contact-child/contact-child.com
 import { ContactDetailComponent } from './contact/contact-detail/contact-detail.component';
 import { RecetteComponent } from './recette/recette.component';
 import { StarRatingPipe } from './shares/star-rating.pipe';
+import { StarImagePipe } from './shares/star-image.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { StarRatingPipe } from './shares/star-rating.pipe';
     ContactChildComponent,
     ContactDetailComponent,
     RecetteComponent,
-    StarRatingPipe
+    StarRatingPipe,
+    StarImagePipe
   ],
   imports: [
     BrowserModule,
