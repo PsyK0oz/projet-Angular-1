@@ -2,7 +2,7 @@
 import { Component, Input, HostListener } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { MatDialog } from '@angular/material/dialog';
-import { Contact } from '../contact.service';
+import { Contact } from '../../models/contact.model';
 import { ContactDetailComponent } from '../contact-detail/contact-detail.component';
 
 @Component({

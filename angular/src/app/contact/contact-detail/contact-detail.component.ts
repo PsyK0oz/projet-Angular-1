@@ -1,7 +1,7 @@
 // contact-detail.component.ts
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Contact } from '../contact.service';
+import { Contact } from '../../models/contact.model';
 
 @Component({
   selector: 'app-contact-detail',
