@@ -12,7 +12,7 @@ export class ContactService {
       email: 'pierrelucoswald1@gmail.com',
       phone: '0123456789',
       image: 'assets/elipl.jpg',
-      details: 'test'
+      details: 'Je suis fan de angular'
     },
   ];
 
