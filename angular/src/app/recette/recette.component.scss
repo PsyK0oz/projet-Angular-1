@@ -1,9 +1,11 @@
 // recette.component.scss
 .img-thumbnail {
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
   }
 
 .star {
     color: gold;
   }
+
