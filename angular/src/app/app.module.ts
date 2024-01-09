@@ -17,6 +17,8 @@ import { RecetteComponent } from './recette/recette.component';
 import { StarRatingPipe } from './shares/star-rating.pipe';
 import { StarImagePipe } from './shares/star-image.pipe';
 import { RecipeDialogComponent } from './recipe-dialog/recipe-dialog.component';
+import { InformationComponent } from './information/information.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { RecipeDialogComponent } from './recipe-dialog/recipe-dialog.component';
     RecetteComponent,
     StarRatingPipe,
     StarImagePipe,
-    RecipeDialogComponent
+    RecipeDialogComponent,
+    InformationComponent,
+    
   ],
   imports: [
     BrowserModule,
