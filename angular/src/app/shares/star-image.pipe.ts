@@ -8,7 +8,7 @@ export class StarImagePipe implements PipeTransform {
 
   transform(value: number, ...args: unknown[]): string {
     // Remplacez 'path/to/your/images' par le chemin d'accès à vos images d'étoiles
-    return `./assets/rating${value}.png`;
+    return `./assets/${value}-stars.png`;
   }
 
 }

@@ -36,8 +36,8 @@
       <h2 *ngIf="previewTitle">Titre de la recette : {{ previewTitle }}</h2>
       <p *ngIf="previewIngredients">Ingrédients : {{ previewIngredients }}</p>
       <p *ngIf="previewInstructions">Instructions : {{ previewInstructions }}</p>
-      <img [src]="previewImage" alt="Aperçu de l'image" class="img-fluid img-thumbnail" *ngIf="previewImage">
-      <img [src]="previewRating | starImage" alt="Aperçu de la note" *ngIf="previewImage">
+      <img [src]="previewImage" alt="Aperçu de l'image" class="img-fluid img-thumbnail" *ngIf="previewImage"><br>
+      <img [src]="previewRating | starImage" alt="Aperçu de la note" class="img-fluid" *ngIf="previewRating">
       <p *ngIf="previewRating" class="star">Note : {{ previewRating | starRating }}</p>
     </div>
   </div>
