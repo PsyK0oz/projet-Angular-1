@@ -11,6 +11,8 @@
 
 .recipe-card {
     height: 400px; 
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
   }
   
   .recipe-card-body {
@@ -21,4 +23,8 @@
 .card-img-top {
     height: 200px; 
     object-fit: cover;
+  }
+
+.recipe-card:hover {
+    transform: scale(1.1);
   }
